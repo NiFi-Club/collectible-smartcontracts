@@ -10,7 +10,9 @@ Collectible NFTs smartcontracts
 
 ### Wrap smartcontracts
 >tondev js wrap CollectionRoot.abi.json 
+
 >tondev js wrap Collection.abi.json
+
 >tondev js wrap CollectionToken.abi.json
 
 ### Deploy CollectionRoot contract
@@ -24,5 +26,7 @@ Collectible NFTs smartcontracts
 
 ### Deploy DeBot
 > tonos-cli deploy NiFiDebot.tvc "{}" --sign NiFiDebot.keys.json --abi NiFiDebot.abi.json
+> 
 > tonos-cli call <ADDRESS> setABI "{\"dabi\":\"<ABI>\"}" --sign NiFiDebot.keys.json --abi NiFiDebot.abi.json
+  
 > tonos-cli call <ADDRESS> setRoot "{\"addr\":\"<ROOT>\"}" --sign NiFiDebot.keys.json --abi NiFiDebot.abi.json
