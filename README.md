@@ -2,14 +2,18 @@
 Collectible NFTs smartcontracts
 
 ### Compile smartcontracts
-> tondev sol compile CollectionRoot.sol
-> tondev sol compile Collection.sol
-> tondev sol compile CollectionToken.sol
+>tondev sol compile CollectionRoot.sol
+
+>tondev sol compile Collection.sol
+
+>tondev sol compile CollectionToken.sol
 
 ### Wrap smartcontracts
-> tondev js wrap CollectionRoot.abi.json 
-> tondev js wrap Collection.abi.json
-> tondev js wrap CollectionToken.abi.json
+>tondev js wrap CollectionRoot.abi.json 
+
+>tondev js wrap Collection.abi.json
+
+>tondev js wrap CollectionToken.abi.json
 
 ### Deploy CollectionRoot contract
 1. Go to deploy folder
@@ -22,5 +26,7 @@ Collectible NFTs smartcontracts
 
 ### Deploy DeBot
 > tonos-cli deploy NiFiDebot.tvc "{}" --sign NiFiDebot.keys.json --abi NiFiDebot.abi.json
+> 
 > tonos-cli call <ADDRESS> setABI "{\"dabi\":\"<ABI>\"}" --sign NiFiDebot.keys.json --abi NiFiDebot.abi.json
+  
 > tonos-cli call <ADDRESS> setRoot "{\"addr\":\"<ROOT>\"}" --sign NiFiDebot.keys.json --abi NiFiDebot.abi.json
