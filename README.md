@@ -2,9 +2,11 @@
 Collectible NFTs smartcontracts
 
 ### Compile smartcontracts
-> tondev sol compile CollectionRoot.sol
-> tondev sol compile Collection.sol
-> tondev sol compile CollectionToken.sol
+>tondev sol compile CollectionRoot.sol
+
+>tondev sol compile Collection.sol
+
+>tondev sol compile CollectionToken.sol
 
 ### Wrap smartcontracts
 >tondev js wrap CollectionRoot.abi.json 
