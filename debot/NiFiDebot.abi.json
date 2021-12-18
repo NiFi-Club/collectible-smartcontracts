@@ -157,13 +157,6 @@
 			]
 		},
 		{
-			"name": "sendMsg",
-			"inputs": [
-			],
-			"outputs": [
-			]
-		},
-		{
 			"name": "onMintError",
 			"inputs": [
 				{"name":"sdkError","type":"uint32"},
@@ -175,7 +168,7 @@
 		{
 			"name": "onMintSuccess",
 			"inputs": [
-				{"name":"id","type":"uint256"}
+				{"name":"transId","type":"uint64"}
 			],
 			"outputs": [
 			]
