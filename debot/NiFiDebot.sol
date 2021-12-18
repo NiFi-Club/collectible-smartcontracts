@@ -208,21 +208,17 @@ contract MintDebot is Debot, Upgradable {
 
     function confirmTransfer(bool value) public {
         if (value) {
-            Terminal.print(tvm.functionId(sendMsg),"⚠ In case you experience problems with message processing please reload the debot");
+            tvm.sendrawmsg(_sendMsg, 1);
         } else {
             Terminal.print(tvm.functionId(showCollectionMenu), "Terminated!");
         }
-    }
-
-    function sendMsg() public {
-        tvm.sendrawmsg(_sendMsg, 1);
     }
 
     function onMintError(uint32 sdkError, uint32 exitCode) public {
         ConfirmInput.get(tvm.functionId(confirmTransfer), format("Transaction failed. Sdk error = {}, Error code = {}\nDo you want to retry?", sdkError, exitCode));
     }
 
-    function onMintSuccess(uint256 id) public {
+    function onMintSuccess(uint64 transId) public {
         Terminal.print(0,"Minted!");
         showCollectionMenu();
     }
